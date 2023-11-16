@@ -24,7 +24,7 @@ public class TankController : MonoBehaviour
         // Capture input
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed/2;
+        forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed / 2;
     }
 
     void FixedUpdate()
