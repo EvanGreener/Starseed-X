@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
-public class TankController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float strifeSpeed = 2.0f;
     public float verticalSpeed = 2.0f;
     public float forwardBackwardSpeed = 0.25f;
 
     Rigidbody rb;
-
     float horizontal = 0.0f;
     float vertical = 0.0f;
     float forward;

@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Collections;
-using Unity.VisualScripting;
+using System.ComponentModel;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     public float maxHealth;
-    [ReadOnly]
     public float currentHealth;
-
+    public int scoreWhenDestroyed = 10;
+    public Color color;
     public static float damageFromBullet = 5.0f;
 
-    public Color color;
     float h, s, v;
-
+    GameManager gameManager;
     Material mat;
 
     void Start()
@@ -23,10 +21,12 @@ public class Health : MonoBehaviour
         mat.SetColor("_Color", color);
         Color.RGBToHSV(color, out h, out s, out v);
         currentHealth = maxHealth;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     void OnTriggerEnter(Collider collider)
     {
+
         GameObject obj = collider.gameObject;
         currentHealth -= obj.tag.CompareTo("Bullet") == 0 ? damageFromBullet : 0;
 
@@ -37,6 +37,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            gameManager.UpdateScore(scoreWhenDestroyed);
             Destroy(gameObject);
         }
     }

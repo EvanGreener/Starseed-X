@@ -192,7 +192,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5524804656233361553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  scoreWhenDestroyed: 20
   color: {r: 0.3529412, g: 0.65882355, b: 0.227451, a: 1}
 --- !u!114 &1228335363838969163
 MonoBehaviour:
@@ -221,5 +222,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  verticalSpeed: 10
-  switchDirectionTime: 0.5
+  verticalSpeed: 2
+  switchDirectionTime: 0.25
