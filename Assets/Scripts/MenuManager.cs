@@ -6,8 +6,20 @@ using UnityEditor;
 
 public class MenuManager : MonoBehaviour
 {
-    public void StartGame()
+    public void EasyGame()
     {
+        DifficultySettings.InitialDifficulty = DifficultyFactor.EASY;
+        SceneManager.LoadScene(1);
+    }
+
+    public void MediumGame()
+    {
+        DifficultySettings.InitialDifficulty = DifficultyFactor.MEDIUM;
+        SceneManager.LoadScene(1);
+    }
+    public void HardGame()
+    {
+        DifficultySettings.InitialDifficulty = DifficultyFactor.HARD;
         SceneManager.LoadScene(1);
     }
 

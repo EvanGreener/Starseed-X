@@ -27,7 +27,14 @@ public class GameManager : MonoBehaviour
     float superElapsed = 0f;
     float shooterElapsed = 0f;
     float time = 0f;
+    bool _45secPassed = false;
+    bool _2min45secPassed = false;
+    bool _4min45secPassed = false;
 
+    void Start()
+    {
+        spawnFreqFactor = (float)DifficultySettings.InitialDifficulty;
+    }
     void Update()
     {
 
@@ -44,7 +51,23 @@ public class GameManager : MonoBehaviour
         shooterElapsed += Time.deltaTime / spawnFreqFactor;
 
         time += Time.deltaTime;
-        timeText.text = time + "s";
+        timeText.text = string.Format("{0:.##}", time) + "s";
+
+        if (time >= 285 && !_4min45secPassed)
+        {
+            spawnFreqFactor /= 2;
+            _4min45secPassed = true;
+        }
+        else if (time >= 165 && !_2min45secPassed)
+        {
+            spawnFreqFactor /= 2;
+            _2min45secPassed = true;
+        }
+        else if (time >= 45 && !_45secPassed)
+        {
+            spawnFreqFactor /= 2;
+            _45secPassed = true;
+        }
 
     }
 

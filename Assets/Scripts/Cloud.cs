@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-    public static float speed = 20.0f;
+    public float speed = 20.0f;
     Vector3 start;
     Vector3 end;
 
