@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TankController : MonoBehaviour
@@ -24,7 +25,7 @@ public class TankController : MonoBehaviour
         // Capture input
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed / 2;
+        forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed;
     }
 
     void FixedUpdate()
@@ -32,5 +33,15 @@ public class TankController : MonoBehaviour
         rb.velocity = new Vector3(horizontal * strifeSpeed, vertical * strifeSpeed, forward);
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, horizontal * -30));
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        GameObject obj = collision.gameObject;
+        if (obj.tag.CompareTo("Obstacle") == 0)
+        {
+            Debug.Log("Game over");
+            Destroy(gameObject);
+        }
     }
 }
