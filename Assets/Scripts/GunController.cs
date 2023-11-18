@@ -26,7 +26,7 @@ public class GunController : MonoBehaviour
     {
         // Firing code
         firing = Input.GetButton("Fire1");
-        float heat = -heatCooldownSpeed;
+        float heat = 0f;
         if (firing && elapsedSinceFire >= (1.0f / fireRate) && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
         {
             Instantiate(bulletPrefab, bulletSpawn.position, bulletPrefab.transform.rotation);
@@ -39,7 +39,11 @@ public class GunController : MonoBehaviour
 
         if (firing)
         {
-            heat += overheatSpeed;
+            heat += overheatSpeed * Time.deltaTime;
+        }
+        else
+        {
+            heat = -heatCooldownSpeed * Time.deltaTime;
         }
         overHeatBar.SetCurrentOverheat(heat);
 

@@ -16,16 +16,19 @@ public class GameManager : MonoBehaviour
     public float superEnemyFreq = 0.25f;
     public float shooterEnemyFreq = 2.0f;
     public float spawnFreqFactor = 2;
-    public GameObject enemySpawnPoints;
+    public GameObject[] powerUps;
+    public float powerUpSpawnFreq = 0.1f / 3;
+    public GameObject spawnPoints;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
 
-    float score = 0.0f;
+    public float score = 0.0f;
     float rockElapsed = 0f;
     float randomElapsed = 0f;
     float fastElapsed = 0f;
     float superElapsed = 0f;
     float shooterElapsed = 0f;
+    float powerUpElapsed = 0f;
     float time = 0f;
     bool _45secPassed = false;
     bool _2min45secPassed = false;
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        spawnFreqFactor = (float)DifficultySettings.InitialDifficulty;
+        spawnFreqFactor = (float)GameData.InitialDifficulty;
     }
     void Update()
     {
@@ -50,6 +53,9 @@ public class GameManager : MonoBehaviour
         superElapsed += Time.deltaTime / spawnFreqFactor;
         shooterElapsed += Time.deltaTime / spawnFreqFactor;
 
+        SpawnRandomPowerUp();
+        powerUpElapsed += Time.deltaTime;
+
         time += Time.deltaTime;
         timeText.text = string.Format("{0:.##}", time) + "s";
 
@@ -60,22 +66,32 @@ public class GameManager : MonoBehaviour
         }
         else if (time >= 165 && !_2min45secPassed)
         {
-            spawnFreqFactor /= 2;
+            spawnFreqFactor /= 1.5f;
             _2min45secPassed = true;
         }
         else if (time >= 45 && !_45secPassed)
         {
-            spawnFreqFactor /= 2;
+            spawnFreqFactor /= 1.33333f;
             _45secPassed = true;
         }
 
+    }
+
+    void SpawnRandomPowerUp()
+    {
+        if (powerUpElapsed > 1f / powerUpSpawnFreq)
+        {
+            Transform spawn = spawnPoints.transform.GetChild(Random.Range(0, spawnPoints.transform.childCount));
+            Instantiate(powerUps[Random.Range(0, powerUps.Length)], spawn.position, spawn.rotation);
+            powerUpElapsed = 0;
+        }
     }
 
     void SpawnEnemy(GameObject enemy, ref float elapsed, float spawnFrequency)
     {
         if (elapsed > 1f / spawnFrequency)
         {
-            Transform spawn = enemySpawnPoints.transform.GetChild(Random.Range(0, enemySpawnPoints.transform.childCount));
+            Transform spawn = spawnPoints.transform.GetChild(Random.Range(0, spawnPoints.transform.childCount));
             Instantiate(enemy, spawn.position, spawn.rotation);
             elapsed = 0;
         }

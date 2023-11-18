@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
+    public TextMeshProUGUI lastScoreText;
+    void Start()
+    {
+        lastScoreText.text = "Last score: " + GameData.LastScore + "pts";
+    }
+
     public void EasyGame()
     {
-        DifficultySettings.InitialDifficulty = DifficultyFactor.EASY;
+        GameData.InitialDifficulty = DifficultyFactor.EASY;
         SceneManager.LoadScene(1);
     }
 
     public void MediumGame()
     {
-        DifficultySettings.InitialDifficulty = DifficultyFactor.MEDIUM;
+        GameData.InitialDifficulty = DifficultyFactor.MEDIUM;
         SceneManager.LoadScene(1);
     }
     public void HardGame()
     {
-        DifficultySettings.InitialDifficulty = DifficultyFactor.HARD;
+        GameData.InitialDifficulty = DifficultyFactor.HARD;
         SceneManager.LoadScene(1);
     }
 
