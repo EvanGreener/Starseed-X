@@ -7,6 +7,7 @@ public class Shield : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
+        Destroy(collision.gameObject);
         gameObject.SetActive(false);
     }
 }
