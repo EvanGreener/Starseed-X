@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     public float strifeSpeed = 2.0f;
     public float verticalSpeed = 2.0f;
     public float forwardBackwardSpeed = 0.25f;
-
     public GameManager gameManager;
+    public GunController gunController;
+
 
     Rigidbody rb;
     float horizontal = 0.0f;
@@ -76,6 +77,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (obj.tag.CompareTo("cooling") == 0)
         {
+            // Restart powerup timer
+            gunController.coolingElapsed = 0f;
             Debug.Log("Cooling powerup");
             Destroy(obj);
 
