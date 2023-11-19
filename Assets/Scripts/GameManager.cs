@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,8 +22,10 @@ public class GameManager : MonoBehaviour
     public GameObject spawnPoints;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
-
+    public Image[] upgradeImages;
     public float score = 0.0f;
+    public GunController gunController;
+
     float rockElapsed = 0f;
     float randomElapsed = 0f;
     float fastElapsed = 0f;
@@ -33,11 +36,20 @@ public class GameManager : MonoBehaviour
     bool _45secPassed = false;
     bool _2min45secPassed = false;
     bool _4min45secPassed = false;
+    bool[] upgradesGiven;
+    float scoreMultiplier = 1f;
 
     void Start()
     {
         spawnFreqFactor = (float)GameData.InitialDifficulty;
+
+        upgradesGiven = new bool[upgradeImages.Length];
+        for (int i = 0; i < upgradesGiven.Length; i++)
+        {
+            upgradesGiven[i] = false;
+        }
     }
+
     void Update()
     {
 
@@ -99,7 +111,35 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int value)
     {
-        score += value;
+        score += value * scoreMultiplier;
         scoreText.text = score + "pts";
+    }
+
+    public void GiveRandomUpgrade()
+    {
+        // Randomly select an upgrade that hasn't been given yet
+        int index = Random.Range(0, upgradesGiven.Length);
+        while (upgradesGiven[index])
+        {
+            index = Random.Range(0, upgradesGiven.Length);
+        }
+
+        string upgrade = upgradeImages[index].gameObject.name;
+        if (upgrade.CompareTo("Fire rate") == 0)
+        {
+            gunController.fireRate *= 2;
+        }
+        else if (upgrade.CompareTo("Score multiplier") == 0)
+        {
+            scoreMultiplier = 1.5f;
+        }
+        else if (upgrade.CompareTo("Max Overheat") == 0)
+        {
+            gunController.overHeatBar.SetMaxOverheat(gunController.maxOverheat + 50);
+        }
+
+        upgradeImages[index].enabled = true;
+        upgradesGiven[index] = true;
+
     }
 }

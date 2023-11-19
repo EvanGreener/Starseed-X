@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class Health : MonoBehaviour
         }
         else
         {
+            if (obj.name.CompareTo("SuperEnemy") == 0)
+            {
+                gameManager.GiveRandomUpgrade();
+            }
             gameManager.UpdateScore(scoreWhenDestroyed);
             Destroy(gameObject);
         }
