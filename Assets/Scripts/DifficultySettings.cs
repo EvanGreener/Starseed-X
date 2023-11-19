@@ -6,6 +6,6 @@ public enum DifficultyFactor
 public static class GameData
 {
     public static DifficultyFactor InitialDifficulty = DifficultyFactor.EASY;
-    public static float LastScore = 0;
+    public static string LastScore = "N/A";
 
 }

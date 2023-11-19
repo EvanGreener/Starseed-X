@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game over");
             Destroy(gameObject);
-            GameData.LastScore = gameManager.score;
+            GameData.LastScore = gameManager.score + "";
             SceneManager.LoadScene(0);
         }
 
