@@ -5,9 +5,20 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public PlayerController player;
+    Rigidbody rb;
+    void Start()
     {
-        Destroy(collision.gameObject);
+        rb = GetComponent<Rigidbody>();
+    }
+    void FixedUpdate()
+    {
+        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        Destroy(collider.gameObject);
         gameObject.SetActive(false);
     }
 }
