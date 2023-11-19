@@ -16,6 +16,17 @@ public class Shield : MonoBehaviour
         transform.position = player.transform.position;
     }
 
+    // The enemy bullets aren't triggers
+    void OnCollisionEnter(Collision collision)
+    {
+        GameObject obj = collision.gameObject;
+        if (obj.tag.CompareTo("Obstacle") == 0)
+        {
+            Destroy(obj);
+            gameObject.SetActive(false);
+        }
+    }
+
     void OnTriggerEnter(Collider collider)
     {
         Destroy(collider.gameObject);
