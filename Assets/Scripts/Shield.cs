@@ -11,9 +11,9 @@ public class Shield : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-    void FixedUpdate()
+    void Update()
     {
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        transform.position = player.transform.position;
     }
 
     void OnTriggerEnter(Collider collider)
