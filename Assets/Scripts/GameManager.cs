@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public Image[] upgradeImages;
     public float score = 0.0f;
+    public float time = 0f;
     public GunController gunController;
 
     float rockElapsed = 0f;
@@ -32,7 +33,6 @@ public class GameManager : MonoBehaviour
     float superElapsed = 0f;
     float shooterElapsed = 0f;
     float powerUpElapsed = 0f;
-    float time = 0f;
     bool _45secPassed = false;
     bool _2min45secPassed = false;
     bool _4min45secPassed = false;

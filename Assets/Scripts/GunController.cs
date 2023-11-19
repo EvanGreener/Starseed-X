@@ -26,7 +26,8 @@ public class GunController : MonoBehaviour
     float elapsedSinceFire;
     bool firing = false;
 
-
+    AudioSource machineGunSounds;
+    bool audioPlaying = false;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class GunController : MonoBehaviour
         elapsedSinceFire = 1.0f / fireRate;
         coolingElapsed = coolingDuration;
         multiGunElapsed = multiGunDuration;
+        machineGunSounds = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -59,10 +61,20 @@ public class GunController : MonoBehaviour
         // Overheat and cooling logic
         if (firing)
         {
+            if (!audioPlaying && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
+            {
+                machineGunSounds.Play();
+                audioPlaying = true;
+            }
             heat += overheatSpeed * coolingMultiplier * Time.deltaTime;
         }
         else
         {
+            if (audioPlaying)
+            {
+                machineGunSounds.Stop();
+                audioPlaying = false;
+            }
             heat = -heatCooldownSpeed * Time.deltaTime;
         }
 

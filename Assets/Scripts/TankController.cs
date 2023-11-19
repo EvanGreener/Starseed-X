@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour
     float forward;
     float speedMultiplier = 1f;
     float speedElapsed;
+    SFXManager sFXManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         speedElapsed = speedPowerUpDuration;
+        sFXManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
 
     }
 
@@ -63,9 +65,8 @@ public class PlayerController : MonoBehaviour
         GameObject obj = collision.gameObject;
         if (obj.tag.CompareTo("Obstacle") == 0)
         {
-            Debug.Log("Game over");
             Destroy(gameObject);
-            GameData.LastScore = gameManager.score + "";
+            GameData.LastScore = gameManager.score + (gameManager.time * 10) + "";
             SceneManager.LoadScene(0);
         }
 
@@ -80,7 +81,6 @@ public class PlayerController : MonoBehaviour
         // Enemies & obstacles
         if (obj.tag.CompareTo("Obstacle") == 0)
         {
-            Debug.Log("Game over");
             Destroy(gameObject);
             GameData.LastScore = gameManager.score + "";
             SceneManager.LoadScene(0);
@@ -89,36 +89,35 @@ public class PlayerController : MonoBehaviour
         // Power ups
         if (obj.tag.CompareTo("100") == 0)
         {
+            sFXManager.PlayPickupSound();
             gameManager.UpdateScore(100);
-            Debug.Log("+100 score powerup");
             Destroy(obj);
         }
         else if (obj.tag.CompareTo("shield") == 0)
         {
+            sFXManager.PlayPickupSound();
             shield.SetActive(true);
-            Debug.Log("Shield powerup");
             Destroy(obj);
 
         }
         else if (obj.tag.CompareTo("multigun") == 0)
         {
+            sFXManager.PlayPickupSound();
             gunController.multiGunElapsed = 0f;
-            Debug.Log("Multigun powerup");
             Destroy(obj);
 
         }
         else if (obj.tag.CompareTo("cooling") == 0)
         {
-            // Restart powerup timer
+            sFXManager.PlayPickupSound();
             gunController.coolingElapsed = 0f;
-            Debug.Log("Cooling powerup");
             Destroy(obj);
 
         }
         else if (obj.tag.CompareTo("speed") == 0)
         {
+            sFXManager.PlayPickupSound();
             speedElapsed = 0f;
-            Debug.Log("Speed powerup");
             Destroy(obj);
 
         }

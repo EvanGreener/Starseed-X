@@ -15,6 +15,8 @@ public class Health : MonoBehaviour
     float h, s, v;
     GameManager gameManager;
     Material mat;
+    SFXManager sFXManager;
+
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour
         Color.RGBToHSV(color, out h, out s, out v);
         currentHealth = maxHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        sFXManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
     }
 
     void OnTriggerEnter(Collider collider)
@@ -38,7 +41,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            Debug.Log(gameObject.name);
+            sFXManager.PlayExplosionSound();
             if (gameObject.name.Contains("SuperEnemy"))
             {
                 gameManager.GiveRandomUpgrade();
