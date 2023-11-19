@@ -1048,6 +1048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawn: {fileID: 365873252}
+  bulletSpawn1: {fileID: 744540908}
+  bulletSpawn2: {fileID: 753466429}
   bulletPrefab: {fileID: 4908939364383865395, guid: c080df71494604199a036ce266e3f080, type: 3}
   overHeatBar: {fileID: 386858647}
   maxOverheat: 100
@@ -1058,6 +1060,8 @@ MonoBehaviour:
   coolingMultiplier: 1
   coolingElapsed: 20
   coolingDuration: 20
+  multiGunElapsed: 0
+  multiGunDuration: 20
 --- !u!1 &583685243
 GameObject:
   m_ObjectHideFlags: 0

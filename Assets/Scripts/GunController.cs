@@ -33,6 +33,7 @@ public class GunController : MonoBehaviour
         overHeatBar.SetMaxOverheat(maxOverheat);
         elapsedSinceFire = 1.0f / fireRate;
         coolingElapsed = coolingDuration;
+        multiGunElapsed = multiGunDuration;
     }
 
     void Update()
