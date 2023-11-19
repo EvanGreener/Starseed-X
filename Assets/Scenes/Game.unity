@@ -2072,9 +2072,12 @@ MonoBehaviour:
   spawnPoints: {fileID: 1853512362}
   scoreText: {fileID: 1550212548}
   timeText: {fileID: 434199721}
-  upgradeImages: []
+  upgradeImages:
+  - {fileID: 1734097695}
+  - {fileID: 1906363005}
+  - {fileID: 1634374039}
   score: 0
-  gunController: {fileID: 0}
+  gunController: {fileID: 521125985}
 --- !u!4 &1278273962
 Transform:
   m_ObjectHideFlags: 0
