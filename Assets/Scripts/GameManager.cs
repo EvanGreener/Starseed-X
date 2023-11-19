@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     bool _4min45secPassed = false;
     bool[] upgradesGiven;
     float scoreMultiplier = 1f;
+    int numUpgrades = 0;
 
     void Start()
     {
@@ -117,6 +118,11 @@ public class GameManager : MonoBehaviour
 
     public void GiveRandomUpgrade()
     {
+        if (numUpgrades == upgradesGiven.Length)
+        {
+            return;
+        }
+
         // Randomly select an upgrade that hasn't been given yet
         int index = Random.Range(0, upgradesGiven.Length);
         while (upgradesGiven[index])
@@ -135,11 +141,13 @@ public class GameManager : MonoBehaviour
         }
         else if (upgrade.CompareTo("Max Overheat") == 0)
         {
-            gunController.overHeatBar.SetMaxOverheat(gunController.maxOverheat + 50);
+            float newOverheatMax = gunController.maxOverheat + 50;
+            gunController.overHeatBar.SetMaxOverheat(newOverheatMax);
         }
 
         upgradeImages[index].enabled = true;
         upgradesGiven[index] = true;
+        numUpgrades++;
 
     }
 }

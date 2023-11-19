@@ -24,6 +24,7 @@ public class OverheatBar : MonoBehaviour
 
     public void SetMaxOverheat(float max)
     {
+        maxOverheat = max;
         slider.maxValue = max;
         slider.value = 0;
     }
