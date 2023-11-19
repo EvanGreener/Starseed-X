@@ -14,15 +14,20 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public GunController gunController;
     public GameObject shield;
+    public float speedPowerUpDuration = 20f;
 
     Rigidbody rb;
     float horizontal = 0.0f;
     float vertical = 0.0f;
     float forward;
+    float speedMultiplier = 1f;
+    float speedElapsed;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        speedElapsed = speedPowerUpDuration;
+
     }
 
     void Update()
@@ -31,11 +36,26 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed;
+
+        if (speedElapsed > speedPowerUpDuration)
+        {
+            speedMultiplier = 1f;
+        }
+        else if (speedElapsed <= 0f)
+        {
+            speedMultiplier = 2f;
+            speedElapsed += Time.deltaTime;
+        }
+        else
+        {
+            speedElapsed += Time.deltaTime;
+        }
+
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(horizontal * strifeSpeed, vertical * strifeSpeed, forward);
+        rb.velocity = new Vector3(horizontal * strifeSpeed * speedMultiplier, vertical * strifeSpeed * speedMultiplier, forward * speedMultiplier);
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, horizontal * -30));
     }
@@ -87,6 +107,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (obj.tag.CompareTo("speed") == 0)
         {
+            speedElapsed = 0f;
             Debug.Log("Speed powerup");
             Destroy(obj);
 
