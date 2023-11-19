@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float forwardBackwardSpeed = 0.25f;
     public GameManager gameManager;
     public GunController gunController;
-
+    public GameObject shield;
 
     Rigidbody rb;
     float horizontal = 0.0f;
@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (obj.tag.CompareTo("shield") == 0)
         {
+            shield.SetActive(true);
             Debug.Log("Shield powerup");
             Destroy(obj);
 

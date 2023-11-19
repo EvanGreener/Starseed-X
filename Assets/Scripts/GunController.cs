@@ -61,7 +61,6 @@ public class GunController : MonoBehaviour
         {
             coolingMultiplier = 0.5f;
             coolingImage.enabled = true;
-
             coolingElapsed += Time.deltaTime;
         }
         else
