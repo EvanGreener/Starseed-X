@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GunController : MonoBehaviour
 {
     public Transform bulletSpawn;
+    public Transform bulletSpawn1;
+    public Transform bulletSpawn2;
     public GameObject bulletPrefab;
     public OverheatBar overHeatBar;
     public float maxOverheat = 100.0f;
@@ -15,16 +17,22 @@ public class GunController : MonoBehaviour
     // For the cooling power up
     public Image coolingImage;
     public float coolingMultiplier = 1f;
-    public float coolingElapsed = 20f;
+    public float coolingElapsed;
+    public float coolingDuration = 20f;
+    // For the multigun power up
+    public float multiGunElapsed;
+    public float multiGunDuration = 20f;
+
     float elapsedSinceFire;
     bool firing = false;
-    float coolingDuration = 20f;
+
 
 
     void Start()
     {
         overHeatBar.SetMaxOverheat(maxOverheat);
         elapsedSinceFire = 1.0f / fireRate;
+        coolingElapsed = coolingDuration;
     }
 
     void Update()
@@ -35,6 +43,11 @@ public class GunController : MonoBehaviour
         if (firing && elapsedSinceFire >= (1.0f / fireRate) && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
         {
             Instantiate(bulletPrefab, bulletSpawn.position, bulletPrefab.transform.rotation);
+            if (multiGunElapsed <= multiGunDuration)
+            {
+                Instantiate(bulletPrefab, bulletSpawn1.position, bulletPrefab.transform.rotation);
+                Instantiate(bulletPrefab, bulletSpawn2.position, bulletPrefab.transform.rotation);
+            }
             elapsedSinceFire = 0.0f;
         }
         else if (elapsedSinceFire < (1.0f / fireRate))
@@ -42,6 +55,7 @@ public class GunController : MonoBehaviour
             elapsedSinceFire += Time.deltaTime;
         }
 
+        // Overheat and cooling logic
         if (firing)
         {
             heat += overheatSpeed * coolingMultiplier * Time.deltaTime;
@@ -51,7 +65,7 @@ public class GunController : MonoBehaviour
             heat = -heatCooldownSpeed * Time.deltaTime;
         }
 
-        // When timer is done reset multiplier back to normal
+        // Cooling power up logic
         if (coolingElapsed > coolingDuration)
         {
             coolingImage.enabled = false;
@@ -66,6 +80,12 @@ public class GunController : MonoBehaviour
         else
         {
             coolingElapsed += Time.deltaTime;
+        }
+
+        // Multi gun power up logic
+        if (multiGunElapsed <= multiGunDuration)
+        {
+            multiGunElapsed += Time.deltaTime;
         }
 
 

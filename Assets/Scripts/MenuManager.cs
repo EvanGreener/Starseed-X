@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI lastScoreText;
     void Start()
     {
-        lastScoreText.text = "Last score: " + GameData.LastScore + "pts";
+        lastScoreText.text = "Last score: " + GameData.LastScore;
     }
 
     public void EasyGame()

@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (obj.tag.CompareTo("multigun") == 0)
         {
+            gunController.multiGunElapsed = 0f;
             Debug.Log("Multigun powerup");
             Destroy(obj);
 
