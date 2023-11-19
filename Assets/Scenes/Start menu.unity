@@ -612,6 +612,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d841ed8447b15408bac88bcedcb85b76, type: 3}
+--- !u!4 &332312806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9218377259609339710, guid: d841ed8447b15408bac88bcedcb85b76, type: 3}
+  m_PrefabInstance: {fileID: 332312805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332841662
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,42 +839,82 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 51809130655985545, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 1113745661122896188, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1113745661122896188, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 3803181970447991309, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3803181970447991309, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 4195018132273837144, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4195018132273837144, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 4220153828581158000, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4220153828581158000, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 4231063016955383984, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4231063016955383984, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 4435362934476926930, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4435362934476926930, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 5212852606854208199, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5212852606854208199, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 5352019295867376568, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5352019295867376568, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 5600396937089378839, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5600396937089378839, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 5968995844534520635, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: m_Name
       value: 'Clouds '
@@ -878,6 +923,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5996302593724353962, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -922,10 +971,18 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7943485390699955665, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     - target: {fileID: 8410774416136018261, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8410774416136018261, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: cloudStart
+      value: 
+      objectReference: {fileID: 332312806}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

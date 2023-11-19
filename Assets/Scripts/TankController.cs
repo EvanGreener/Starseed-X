@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
@@ -74,9 +72,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
     void OnTriggerEnter(Collider collider)
     {
         GameObject obj = collider.gameObject;
+
+        // Enemies & obstacles
+        if (obj.tag.CompareTo("Obstacle") == 0)
+        {
+            Debug.Log("Game over");
+            Destroy(gameObject);
+            GameData.LastScore = gameManager.score + "";
+            SceneManager.LoadScene(0);
+        }
+
+        // Power ups
         if (obj.tag.CompareTo("100") == 0)
         {
             gameManager.UpdateScore(100);
