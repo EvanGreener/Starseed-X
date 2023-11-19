@@ -38,7 +38,8 @@ public class Health : MonoBehaviour
         }
         else
         {
-            if (obj.name.Contains("SuperEnemy"))
+            Debug.Log(gameObject.name);
+            if (gameObject.name.Contains("SuperEnemy"))
             {
                 gameManager.GiveRandomUpgrade();
             }

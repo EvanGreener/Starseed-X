@@ -5,7 +5,6 @@ using UnityEngine;
 public class SuperEnemyController : MonoBehaviour
 {
     public float speed = 10.0f;
-    public GameObject[] powerUpDrops;
     Vector3 despawn;
 
     // Start is called before the first frame update
