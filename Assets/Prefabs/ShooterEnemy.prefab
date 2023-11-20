@@ -152,8 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   currentHealth: 0
-  scoreWhenDestroyed: 50
-  color: {r: 0.41176474, g: 0.19215688, b: 0.18431373, a: 1}
+  scoreWhenDestroyed: 75
 --- !u!114 &5250372567907379057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27451752ee7fa46479c5f6dad92f70b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   fireRate: 0.5
   bulletPrefab: {fileID: 3096721426532554973, guid: d4decd53d4e054dacb9b4e2387de5f04, type: 3}
 --- !u!82 &6825352947666849610

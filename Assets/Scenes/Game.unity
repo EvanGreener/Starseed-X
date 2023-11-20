@@ -1283,7 +1283,7 @@ MonoBehaviour:
   maxOverheat: 100
   overheatSpeed: 27.5
   heatCooldownSpeed: 12.5
-  fireRate: 20
+  fireRate: 10
   coolingImage: {fileID: 316161770}
   coolingMultiplier: 1
   coolingElapsed: 20
