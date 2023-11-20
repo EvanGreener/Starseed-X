@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         if (elapsed > 1f / spawnFrequency)
         {
             Transform spawn = spawnPoints.transform.GetChild(Random.Range(0, spawnPoints.transform.childCount));
-            Instantiate(enemy, spawn.position, spawn.rotation);
+            Instantiate(enemy, spawn.position, enemy.transform.rotation);
             elapsed = 0;
         }
     }

@@ -14,15 +14,15 @@ public class Health : MonoBehaviour
 
     float h, s, v;
     GameManager gameManager;
-    Material mat;
+    // Material mat;
     SFXManager sFXManager;
 
 
     void Start()
     {
-        mat = GetComponent<MeshRenderer>().material;
+        // mat = GetComponent<MeshRenderer>().material;
         // mat.SetColor("_Color", color);
-        Color.RGBToHSV(mat.color, out h, out s, out v);
+        // Color.RGBToHSV(mat.color, out h, out s, out v);
         currentHealth = maxHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         sFXManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
         if (currentHealth > 0)
         {
             float newSaturation = s * (currentHealth / maxHealth);
-            mat.SetColor("_Color", Color.HSVToRGB(h, newSaturation, v));
+            // mat.SetColor("_Color", Color.HSVToRGB(h, newSaturation, v));
         }
         else
         {

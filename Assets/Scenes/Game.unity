@@ -2302,16 +2302,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4f40cff16704bb98ff2e80f4e4ca6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rock: {fileID: 7891985054937804945, guid: 42be5251fba4949cb83d691c51f4d730, type: 3}
-  randomEnemy: {fileID: 2369236568380629646, guid: 645c5a1b5ddf045c0b762604f145229f, type: 3}
-  fastEnemy: {fileID: 7777875476365168534, guid: b61fe33a5761e4c13aaea280ca271ccc, type: 3}
-  superEnemy: {fileID: 3408994722732785011, guid: b60f835403459476e9c18dd60af534cb, type: 3}
-  shooterEnemy: {fileID: 876334819506833100, guid: 2e6160523d0ad4ffbb5fe34571333906, type: 3}
+  rock: {fileID: 6710994796340950676, guid: 631ed118ba16c4f64abe998e2a7b95bd, type: 3}
+  randomEnemy: {fileID: 6883025556779581530, guid: a3c1821c8faa74ddf807a535c21b8a6e, type: 3}
+  fastEnemy: {fileID: 6139130112093751809, guid: 66247f1fd849c47eb865c45a9ddf3218, type: 3}
+  superEnemy: {fileID: 6170647009996565899, guid: 4b8bd1251ab8d45a3968ecc62f534a99, type: 3}
+  shooterEnemy: {fileID: 8107592143147060679, guid: 31e54dade450c4e72add4edd6d4be841, type: 3}
   rockFreq: 0.5
   randomEnemyFreq: 0.5
   fastEnemyFreq: 0.25
   superEnemyFreq: 0.05
-  shooterEnemyFreq: 0.25
+  shooterEnemyFreq: 0.1
   spawnFreqFactor: 4
   powerUps:
   - {fileID: 2289714701788150765, guid: 5d7c2a67a204f4257a990790f547d2cb, type: 3}
