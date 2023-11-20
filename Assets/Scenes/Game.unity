@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7943485390699955665, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: cloudStart
       value: 
@@ -809,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7943485390699955665, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: cloudStart
@@ -1686,7 +1694,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1172456849}
   - {fileID: 32286776}
@@ -2047,6 +2055,10 @@ PrefabInstance:
     - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7943485390699955665, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: cloudStart
@@ -2763,7 +2775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1259122697, guid: dec26c586ab5a4abaaaab48dfacf8574, type: 3}
+  m_Sprite: {fileID: 1376334970, guid: 9b30b47bcb6ad48fd8a02a2e4ff48538, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3053,7 +3065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1450938802, guid: dec26c586ab5a4abaaaab48dfacf8574, type: 3}
+  m_Sprite: {fileID: 217614369, guid: 9b30b47bcb6ad48fd8a02a2e4ff48538, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3308,7 +3320,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 149.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 708633074}
   - {fileID: 394628637}
@@ -4236,6 +4248,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7007454270882857739, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7943485390699955665, guid: 807c61aac9c4747cb9034389bf41852c, type: 3}
       propertyPath: cloudStart
       value: 
@@ -4374,6 +4390,7 @@ SceneRoots:
   - {fileID: 419717314}
   - {fileID: 1650021585}
   - {fileID: 750227967}
+  - {fileID: 1853512363}
   - {fileID: 2803069699640769752}
   - {fileID: 931298649}
   - {fileID: 399013339}
@@ -4384,6 +4401,5 @@ SceneRoots:
   - {fileID: 1375952128}
   - {fileID: 5007111911384685250}
   - {fileID: 1278273962}
-  - {fileID: 1853512363}
   - {fileID: 920507716}
   - {fileID: 1954950921}

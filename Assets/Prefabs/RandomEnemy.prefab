@@ -209,7 +209,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   scoreWhenDestroyed: 20
-  color: {r: 0.3529412, g: 0.65882355, b: 0.227451, a: 1}
 --- !u!114 &1228335363838969163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   verticalSpeed: 2
-  switchDirectionTime: 0.25
+  switchDirectionTime: 1
 --- !u!82 &8000163109040632491
 AudioSource:
   m_ObjectHideFlags: 0

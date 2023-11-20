@@ -16,17 +16,22 @@ public class MenuManager : MonoBehaviour
     public void EasyGame()
     {
         GameData.InitialDifficulty = DifficultyFactor.EASY;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void MediumGame()
     {
         GameData.InitialDifficulty = DifficultyFactor.MEDIUM;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void HardGame()
     {
         GameData.InitialDifficulty = DifficultyFactor.HARD;
+        SceneManager.LoadScene(2);
+    }
+
+    public void Manual()
+    {
         SceneManager.LoadScene(1);
     }
 
