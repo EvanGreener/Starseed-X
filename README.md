@@ -10,12 +10,11 @@
 - <b>Bullet damage</b>: 5hp
 
 ## Enemies/obstacles
-
-- <b>Random enemy</b>: moves randomly, small hitbox, normal speed, 10hp, 20 points
-- <b>Shooter enemy</b>: Shoots bullets, small hitbox, normal speed, 15hp, 75 points
-- <b>Rock</b>: normal speed, medium hitbox, 30hp, 10 points
-- <b>Fast enemy</b>: fast speed, small hitbox, 10hp, 50 points
-- <b>Super enemy</b>: Drops random permanent upgrade, big hitbox, normal speed, 100hp, 100 points
+- <b>Random enemy</b>: common, moves randomly, small hitbox, normal speed, 10hp, 20 points
+- <b>Shooter enemy</b>: very uncommon, Shoots bullets, small hitbox, normal speed, 15hp, 75 points
+- <b>Rock</b>: common, normal speed, medium hitbox, 30hp, 10 points
+- <b>Fast enemy</b>: uncommon, fast speed, small hitbox, 10hp, 50 points
+- <b>Super enemy</b>: rare Drops random permanent upgrade, big hitbox, normal speed, 100hp, 100 points
 
 ## Music
 
