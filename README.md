@@ -2,7 +2,7 @@
 
 ## Player & gun parameters
 - <b>Medium</b> sized hitbox
-- <b>fire rate</b>: 20 bullets/s
+- <b>fire rate</b>: 10 bullets/s
 - <b>Inital max heat capacity</b>: 100 heat
 - <b>Heat up speed</b>: 27.5 heat/s
 - <b>cooldown speed</b>: -12.5 heat/s
