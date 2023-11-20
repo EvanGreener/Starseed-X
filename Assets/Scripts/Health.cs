@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public int scoreWhenDestroyed = 10;
-    public Color color;
+    // public Color color;
     public static float damageFromBullet = 5.0f;
 
     float h, s, v;
@@ -21,8 +21,8 @@ public class Health : MonoBehaviour
     void Start()
     {
         mat = GetComponent<MeshRenderer>().material;
-        mat.SetColor("_Color", color);
-        Color.RGBToHSV(color, out h, out s, out v);
+        // mat.SetColor("_Color", color);
+        Color.RGBToHSV(mat.color, out h, out s, out v);
         currentHealth = maxHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         sFXManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
