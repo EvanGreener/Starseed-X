@@ -1271,13 +1271,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Movement Controls: WASD for horizontal and vertical movement (left joystick).
-    Hold SPACE to move forward and release to go backwards again\n\nShooting and
-    Overheat: you can shoot as much by holding down the left mouse button (X button
-    on xbox controller) until your gun overheats, indicated by the overheat bar on
-    the top left. \n\nObjective: Last as long as possible and score points by destroying
-    obstacles and enemies. Sometimes you may find temporary powerups. By destroying
-    a super enemy, you get a random permanent upgrade."
+  m_text: "Movement Controls: WASD for horizontal and vertical movement (or left
+    joystick). Hold SPACE (or B on xbox controller) to move forward and release to
+    go backwards again\n\nShooting and Overheat: you can shoot as much by holding
+    down the left mouse button (or X button on xbox controller) until your gun overheats,
+    indicated by the overheat bar on the top left. \n\nObjective: Last as long as
+    possible and score points by destroying obstacles and enemies. Sometimes you
+    may find temporary powerups. By destroying a super enemy, you get a random permanent
+    upgrade."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

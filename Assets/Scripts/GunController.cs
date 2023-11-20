@@ -61,7 +61,7 @@ public class GunController : MonoBehaviour
         // Overheat and cooling logic
         if (firing)
         {
-            if (!audioPlaying && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
+            if (!audioPlaying)
             {
                 machineGunSounds.Play();
                 audioPlaying = true;
@@ -76,6 +76,12 @@ public class GunController : MonoBehaviour
                 audioPlaying = false;
             }
             heat = -heatCooldownSpeed * Time.deltaTime;
+        }
+
+        if (overHeatBar.GetCurrentOverHeat() > (overHeatBar.maxOverheat - 5))
+        {
+            machineGunSounds.Stop();
+            audioPlaying = false;
         }
 
         // Cooling power up logic
