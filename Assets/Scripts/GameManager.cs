@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public float shooterEnemyFreq = 2.0f;
     public float spawnFreqFactor = 2;
     public GameObject[] powerUps;
-    public float powerUpSpawnFreq = 0.1f / 3;
+    public float powerUpSpawnFreq = 0.07f / 3;
     public GameObject spawnPoints;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         powerUpElapsed += Time.deltaTime;
 
         time += Time.deltaTime;
-        timeText.text = string.Format("{0:.##}", time) + "s";
+        timeText.text = string.Format("{0:.##}", time) + " s";
 
         if (time >= 285 && !_4min45secPassed)
         {
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int value)
     {
         score += value * scoreMultiplier;
-        scoreText.text = score + "pts";
+        scoreText.text = score + " pts";
     }
 
     public void GiveRandomUpgrade()
