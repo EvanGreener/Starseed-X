@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
@@ -22,6 +23,7 @@ public class GunController : MonoBehaviour
     // For the multigun power up
     public float multiGunElapsed;
     public float multiGunDuration = 20f;
+    public EventSystem eventSystem;
 
     float elapsedSinceFire;
     bool firing = false;
@@ -41,7 +43,7 @@ public class GunController : MonoBehaviour
     void Update()
     {
         // Firing code
-        firing = Input.GetButton("Fire1");
+        firing = Input.GetButton("Fire1") && eventSystem.currentSelectedGameObject == null;
         float heat = 0f;
         if (firing && elapsedSinceFire >= (1.0f / fireRate) && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
         {
