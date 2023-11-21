@@ -73,7 +73,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
     void OnTriggerEnter(Collider collider)
     {
         GameObject obj = collider.gameObject;
@@ -82,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (obj.tag.CompareTo("Obstacle") == 0)
         {
             Destroy(gameObject);
-            GameData.LastScore = gameManager.score + "";
+            GameData.LastScore = gameManager.score + (gameManager.time * 10) + "";
             SceneManager.LoadScene(0);
         }
 
