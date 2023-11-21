@@ -29,16 +29,13 @@ Highway To The Danger Zone (Top Gun) - instrumental: Kenny Loggins
 
 ## 3d models
 
-- Flying saucer by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/fojR5i3h_nh)
-- Flying saucer by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/fojR5i3h_nh)
 - alien in green spaceship by Taylor Wilson [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/dQ5itZfc7Bf)
-- ricks ufo by eeee [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/q6vNUoHZXr)
-  -Alien by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/6FrJ3_CzH8S)
-  -UFO TIME by Martin Calviello [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/89hlsI17Ulw)
+- UFO TIME by Martin Calviello [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/89hlsI17Ulw)
 - Alien by Quaternius (https://poly.pizza/m/sUTLXji0aL)
 - Alien Jetpack Go! by Damon Pidhajecky [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/7VJiMcRcn6d)
-- Alien Jetpack Go! by Damon Pidhajecky [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/7VJiMcRcn6d)
+- Moon by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/f82yZ1n8Yiq)
 
 ## Textures
 
-- <a href="https://www.freepik.com/free-photo/starry-night-sky_7061153.htm#query=space%20sky&position=1&from_view=keyword&track=ais&uuid=a87c6c9f-7a40-4ea6-b4e8-f1e41940c2f2">Image by kjpargeter</a> on Freepik
+- <a href="https://rnz-ressh.cloudinary.com/image/upload/s--r0j_UdUo--/c_scale,f_auto,q_auto,w_1050/v1643774793/4MGR0HR_image_crop_116086">Start screen background image </a>
+- <a href="https://images.unsplash.com/photo-1570284613060-766c33850e00?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fHww"> Skybox image </a>
