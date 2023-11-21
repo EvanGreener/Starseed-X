@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
         else
         {
             sFXManager.PlayExplosionSound();
-            if (gameObject.name.Contains("SuperEnemy"))
+            if (gameObject.name.Contains("super enemy"))
             {
                 gameManager.GiveRandomUpgrade();
             }
