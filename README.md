@@ -9,7 +9,8 @@
 - <b>cooldown speed</b>: -12.5 heat/s
 - <b>Bullet damage</b>: 5hp
 
-## Enemies/obstacles
+## Enemies/obstacles parameters
+
 - <b>Random enemy</b>: common, moves randomly, small hitbox, normal speed, 10hp, 20 points
 - <b>Shooter enemy</b>: very uncommon, Shoots bullets, small hitbox, normal speed, 15hp, 75 points
 - <b>Rock</b>: common, normal speed, medium hitbox, 30hp, 10 points
@@ -39,4 +40,5 @@ Highway To The Danger Zone (Top Gun) - instrumental: Kenny Loggins
 - Alien Jetpack Go! by Damon Pidhajecky [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/7VJiMcRcn6d)
 
 ## Textures
+
 - <a href="https://www.freepik.com/free-photo/starry-night-sky_7061153.htm#query=space%20sky&position=1&from_view=keyword&track=ais&uuid=a87c6c9f-7a40-4ea6-b4e8-f1e41940c2f2">Image by kjpargeter</a> on Freepik
