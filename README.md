@@ -1,4 +1,4 @@
-# Comp 376 A3
+# Starseed X - Comp 376 A3
 
 ## Player & gun parameters
 
