@@ -1,5 +1,7 @@
 # Starseed X - Comp 376 A3
 
+An endless runner game where you fight in space to protect earth from Alien invasion.
+
 ## Player & gun parameters
 
 - <b>Medium</b> sized hitbox
