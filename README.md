@@ -2,6 +2,8 @@
 
 An endless runner game where you fight in space to protect earth from Alien invasion.
 
+Itch.io: https://evangreener.itch.io/starseed-x
+
 ## Player & gun parameters
 
 - <b>Medium</b> sized hitbox
