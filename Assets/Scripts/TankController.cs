@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     float horizontal = 0.0f;
     float vertical = 0.0f;
-    float forward;
     float speedMultiplier = 1f;
     float speedElapsed;
     SFXManager sFXManager;
@@ -35,9 +34,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Capture input
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-        forward = Input.GetButton("Forward") ? forwardBackwardSpeed : -forwardBackwardSpeed;
+        horizontal = joystick.Horizontal;
+        vertical = joystick.Vertical;
 
         if (speedElapsed > speedPowerUpDuration)
         {
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(horizontal * strifeSpeed * speedMultiplier, vertical * strifeSpeed * speedMultiplier, forward * speedMultiplier);
+        rb.velocity = new Vector3(horizontal * strifeSpeed * speedMultiplier, vertical * strifeSpeed * speedMultiplier);
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, horizontal * -30));
     }

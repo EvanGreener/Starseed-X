@@ -39,11 +39,18 @@ public class GunController : MonoBehaviour
         multiGunElapsed = multiGunDuration;
         machineGunSounds = GetComponent<AudioSource>();
     }
+    public void FirePressed()
+    {
+        firing = true;
+    }
+    public void FireReleased()
+    {
+        firing = false;
+    }
 
     void Update()
     {
         // Firing code
-        firing = Input.GetButton("Fire1") && eventSystem.currentSelectedGameObject == null;
         float heat = 0f;
         if (firing && elapsedSinceFire >= (1.0f / fireRate) && overHeatBar.GetCurrentOverHeat() < (overHeatBar.maxOverheat - 5))
         {
