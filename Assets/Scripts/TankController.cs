@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public GameObject shield;
     public float speedPowerUpDuration = 20f;
 
+    public FloatingJoystick joystick;
+
     Rigidbody rb;
     float horizontal = 0.0f;
     float vertical = 0.0f;
